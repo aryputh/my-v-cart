@@ -6,9 +6,9 @@ using TMPro;
 
 public class ItemManager : MonoBehaviour
 {
-    private string title;
-    private string description;
-    private string link;
+    public string title;
+    public string description;
+    public string link;
 
     [SerializeField] private TMP_Text titleText;
     [SerializeField] private TMP_Text descText;

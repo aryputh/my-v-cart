@@ -47,6 +47,7 @@ public class AddItemButton : MonoBehaviour
 
         dataManager.AddItem(newItem);
         GameObject newItemObject = Instantiate(itemPrefab, dataManager.itemParent.transform);
+        newItemObject.name = newItem.title;
         ItemManager item = newItemObject.GetComponent<ItemManager>();
         item.SetFields(newItem.title, newItem.description, newItem.link);
     }

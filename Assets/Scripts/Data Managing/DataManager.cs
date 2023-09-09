@@ -71,11 +71,14 @@ public class DataManager : MonoBehaviour
         }
     }
 
-    public void RemoveItem(GameObject itemToDelete)
+    public void RemoveItem(GameObject itemToDelete, string descText, string linkText)
     {
         // Remove the item from the data
         Item itemToRemove = itemData.items.Find(item => item.title == itemToDelete.name);
-        if (itemToRemove != null)
+        Item itemToRemove2 = itemData.items.Find(item2 => item2.description == descText);
+        Item itemToRemove3 = itemData.items.Find(item3 => item3.link == linkText);
+
+        if (itemToRemove != null && (itemToRemove == itemToRemove2 && itemToRemove == itemToRemove3))
         {
             itemData.items.Remove(itemToRemove);
         }

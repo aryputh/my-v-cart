@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToDelete: {fileID: 6812455754928215660}
+  itemManager: {fileID: 7367083244611188052}
 --- !u!1 &4908451590047197575
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74518ae4e679c9a47b6162f464fe7886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  title: 
+  description: 
+  link: 
   titleText: {fileID: 6812455754671724792}
   descText: {fileID: 6812455753875847975}
   fadeTime: 1

@@ -7,6 +7,7 @@ public class DeleteItemButton : MonoBehaviour
     private DataManager dataManager;
 
     [SerializeField] private GameObject itemToDelete;
+    [SerializeField] private ItemManager itemManager;
 
     private void OnEnable()
     {
@@ -17,7 +18,7 @@ public class DeleteItemButton : MonoBehaviour
     // Remove the item from the DataManager's data and the scene
     public void DeleteItem()
     {
-        dataManager.RemoveItem(itemToDelete);
+        dataManager.RemoveItem(itemToDelete, itemManager.description, itemManager.link);
         Destroy(itemToDelete, 0.5f);
     }
 }
