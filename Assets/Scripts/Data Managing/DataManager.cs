@@ -7,8 +7,7 @@ public class DataManager : MonoBehaviour
     [SerializeField] private GameObject itemPrefab;
     public GameObject itemParent;
 
-    [Header("Do NOT edit:")]
-    [SerializeField] private ItemData itemData;
+    private ItemData itemData;
 
     private string dataPath;
 
@@ -16,9 +15,6 @@ public class DataManager : MonoBehaviour
     {
         // Establish a path to save/load from
         dataPath = Path.Combine(Application.persistentDataPath, "_items.json");
-
-        // Prints out where the data is saved
-        //print("Saved at: " + Application.persistentDataPath + "_items.json");
     }
 
     private void OnEnable()
